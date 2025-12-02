@@ -5,9 +5,9 @@ autoupdate-zsh-plugin
 
 ## Install
 
-Create a new directory in `$ZSH_CUSTOM/plugins` called `autoupdate` and clone this repo into that directory. Note: it must be named `autoupdate` or oh-my-zsh won't recognize that it is a valid plugin directory.
+Create a new directory in `${ZSH_CUSTOM}/plugins` called `autoupdate` and clone this repo into that directory. Note: it must be named `autoupdate` or oh-my-zsh won't recognize that it is a valid plugin directory.
 ```
-git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins $ZSH_CUSTOM/plugins/autoupdate
+git clone https://github.com/hribcek/autoupdate-oh-my-zsh-plugins $ZSH_CUSTOM/plugins/autoupdate
 ```
 
 ## Usage
@@ -54,3 +54,7 @@ To speed up updates by setting maximum number of parallel downloads, add this to
 # Parallel downloads will not be enabled if value is out-of-range
 ZSH_CUSTOM_AUTOUPDATE_NUM_WORKERS=8
 ```
+
+### How to prevent updating plugins with autoupdate
+
+To prevent updating **your** plugin with autoupdate (this plugin) just add `.noautoupdate` file in your root of plugin, and autoupdate will skip updating it.
